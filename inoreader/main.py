@@ -125,7 +125,7 @@ def login():
     app_key = config.app_key or DEFAULT_APPKEY
     state = str(uuid4())
     oauth = OAuth2Session(app_id,
-                          redirect_uri='http://localhost:8080/oauth/redirect',
+                          redirect_uri='http://localhost:9090/oauth/redirect',
                           scope='read write',
                           state=state)
 
@@ -139,7 +139,7 @@ def login():
         queue.task_done()
         return 'Done.'
 
-    func = partial(app.run, port=8080, debug=False)
+    func = partial(app.run, port=9090, debug=False)
     threading.Thread(target=func, daemon=True).start()
 
     os.environ['OAUTHLIB_INSECURE_TRANSPORT'] = '1'

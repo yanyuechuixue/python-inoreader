@@ -21,7 +21,7 @@ pip install git+https://github.com/Linusp/python-inoreader.git
 
 ## Usage
 
-1. [Register your application](https://www.inoreader.com/developers/register-app). Use `http://localhost:8080/oauth/redirect` for the redirect URI and set scope to "Read and Write". Then create the configuration file `$HOME/.inoreader`
+1. [Register your application](https://www.inoreader.com/developers/register-app). Use `http://localhost:9090/oauth/redirect` for the redirect URI and set scope to "Read and Write". Then create the configuration file `$HOME/.inoreader`
 
    An example of the configuration file:
 
