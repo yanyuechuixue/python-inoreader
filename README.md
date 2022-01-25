@@ -1,7 +1,7 @@
 Inoreader
 =========
 
-![](https://api.travis-ci.org/Linusp/python-inoreader.png?branch=master)
+![](https://api.travis-ci.org/yanyuechuixue/python-inoreader.png?branch=master)
 
 Python wrapper of Inoreader API.
 
@@ -16,7 +16,7 @@ python setup.py install
 2. Install with `pip` directly
 
 ```shell
-pip install git+https://github.com/Linusp/python-inoreader.git
+pip install git+https://github.com/yanyuechuixue/python-inoreader.git
 ```
 
 ## Usage
