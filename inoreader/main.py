@@ -21,6 +21,7 @@ import click
 from tabulate import tabulate
 from flask import Flask, request
 from requests_oauthlib import OAuth2Session
+import webbrowser
 
 from inoreader import InoreaderClient
 from inoreader.filter import get_filter
@@ -150,6 +151,7 @@ def login():
 
     token = None
     print('Open the link to authorize access:', authorization_url)
+    webbrowser.open(authorization_url)
     while True:
         token = queue.get()
         if token:
