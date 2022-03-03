@@ -17,6 +17,8 @@ from .consts import BASE_URL
 from .exception import NotLoginError, APIError
 from .article import Article
 from .subscription import Subscription
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
 
 
 LOGGER = logging.getLogger(__name__)

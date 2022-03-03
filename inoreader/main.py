@@ -22,6 +22,8 @@ from tabulate import tabulate
 from flask import Flask, request
 from requests_oauthlib import OAuth2Session
 import webbrowser
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
 
 from inoreader import InoreaderClient
 from inoreader.filter import get_filter
@@ -31,6 +33,7 @@ from inoreader.config import InoreaderConfigManager
 from inoreader.consts import DEFAULT_APPID, DEFAULT_APPKEY
 from inoreader.utils import download_image
 
+ssl._create_default_https_context = ssl._create_unverified_context
 
 APPID_ENV_NAME = 'INOREADER_APP_ID'
 APPKEY_ENV_NAME = 'INOREADER_APP_KEY'

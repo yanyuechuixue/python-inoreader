@@ -7,6 +7,8 @@ import shutil
 
 import requests
 from lxml import html
+import ssl
+ssl._create_default_https_context = ssl._create_unverified_context
 
 
 def normalize_whitespace(text):
